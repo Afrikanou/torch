@@ -13,13 +13,7 @@ def main(page:Page):
         "Against": "fonts/against.ttf",
         "Bird": "fonts/bird.ttf"}
     
-    flashlight = Flashlight()
-    page.overlay.append(flashlight)
-    ph = PermissionHandler()
-    page.overlay.append(ph)
-
-    def open_sett(e):
-        ph.open_app_settings
+    
     
     page.add(
         AppBar(
@@ -27,7 +21,7 @@ def main(page:Page):
             color='white',
             bgcolor='#800080',
             actions=[
-                IconButton(icons.SETTINGS,on_click=open_sett)
+                IconButton(icons.SETTINGS,on_click=...)
             ]
         ),
         Row([
@@ -52,7 +46,7 @@ def main(page:Page):
                     color='#ffffff',
                     padding=15,
                     shape=ContinuousRectangleBorder(radius=100)
-                ),on_click=lambda _: flashlight.turn_on()
+                ),on_click=...
             ),
             
             Text('  ',size=50),
@@ -65,7 +59,7 @@ def main(page:Page):
                     color='#ffffff',
                     padding=15,
                     shape=ContinuousRectangleBorder(radius=100)
-                ),on_click=lambda _: flashlight.turn_off()
+                ),on_click=...
             )
         ],alignment=MainAxisAlignment.CENTER)
 
